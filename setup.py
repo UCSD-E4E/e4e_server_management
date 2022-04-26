@@ -12,6 +12,8 @@ setup(
     },
     packages=find_packages(),
     install_requires=[
-        "pyyaml"
+        "pyyaml",
+        'pytest',
+        
     ]
 )
