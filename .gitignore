@@ -2,6 +2,7 @@ pubkeys.yaml
 *_authorized_keys
 account_create.sh
 account_update.sh
+account_access_report.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -132,3 +133,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+user_access_report.md
+mounts.yaml
