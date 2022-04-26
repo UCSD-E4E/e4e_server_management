@@ -41,12 +41,12 @@ def ssh_manager():
     key_info: Dict[str, Dict[str, Dict[str, Union[str, List[str]]]]] = key_schema.validate(key_info)
     
     authorized_keys: Dict[str, List[Key]] = {}
-    user_access_report: Dict[str, List[str]] = {}
-    account_access_report: Dict[str, List[str]] = {}
+    user_access_report: Dict[str, Set[str]] = {}
+    account_access_report: Dict[str, Set[str]] = {}
 
     for user, keys in key_info.items():
         if user not in user_access_report:
-            user_access_report[user] = []
+            user_access_report[user] = set()
 
         for key_name, key_data in keys.items():
             key = Key(KeyType(key_data['type']), key_data['key'], key_name)
@@ -56,12 +56,12 @@ def ssh_manager():
                 else:
                     authorized_keys[account].append(key)
     
-                user_access_report[user].append(account)
+                user_access_report[user].add(account)
 
                 if account not in account_access_report:
-                    account_access_report[account] = [user]
+                    account_access_report[account] = set([user])
                 else:
-                    account_access_report[account].append(user)
+                    account_access_report[account].add(user)
     
     accounts_to_create: List[str] = []
     for account in authorized_keys:
