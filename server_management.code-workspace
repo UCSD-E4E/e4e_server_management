@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"ms-python.vscode-pylance",
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"njpwerner.autodocstring"
+		]
+	}
+}
