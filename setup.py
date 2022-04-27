@@ -14,6 +14,6 @@ setup(
     install_requires=[
         "pyyaml",
         'pytest',
-        
+        'schema',
     ]
 )
