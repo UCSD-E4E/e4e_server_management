@@ -1,4 +1,5 @@
 pubkeys.yaml
+remotes.yaml
 *_authorized_keys
 account_create.sh
 account_update.sh
