@@ -7,7 +7,8 @@ setup(
     author_email='e4e@eng.ucsd.edu',
     entry_points={
         'console_scripts': [
-            'manager = ServerManagement.ssh_manager:ssh_manager'
+            'manager = ServerManagement.ssh_manager:ssh_manager',
+            'remote_manager = ServerManagement.remote_manger:main'
         ]
     },
     packages=find_packages(),
