@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Remote Manager",
+            "type": "python",
+            "request": "launch",
+            "module": "ServerManagement.remote_manager",
+            "justMyCode": true
+        },
+        {
             "name": "System Manager",
             "type": "python",
             "request": "launch",

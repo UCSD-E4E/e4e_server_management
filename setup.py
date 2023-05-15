@@ -16,5 +16,7 @@ setup(
         "pyyaml",
         'pytest',
         'schema',
+        'fabric2',
+        'glances-api',
     ]
 )
