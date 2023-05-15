@@ -83,6 +83,7 @@ def ssh_manager():
         update.write('#!/bin/bash\n')
         for account, keys in authorized_keys.items():
             with open(f'{account}_authorized_keys', 'w') as f:
+                f.write('# Do not modify this file by hand - please submit keys to be added to the server admin\n')
                 for key in keys:
                     f.write(key.authorized_key_entry() + '\n')
             update.write(f'mkdir -p /home/{account}/.ssh\n')
